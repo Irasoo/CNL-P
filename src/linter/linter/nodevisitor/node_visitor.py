@@ -9,6 +9,9 @@ import fnmatch
 from typing import TypedDict, Dict, List, Union, Optional, Any, Literal
 
 """
+About how to get location information by traversing JSON
+First, it is necessary to traverse the `main_flow` to obtain the sequence number of each block and the sequence number of each command within the block.
+Just like follows:
 {
     "main_control_flow": {
         "sequential_block1": {
@@ -67,13 +70,8 @@ from typing import TypedDict, Dict, List, Union, Optional, Any, Literal
     }
 }
 
-
-"var_not_in_if_block": {
-    "block_order": int,
-    "total"
-    "command_order": int,
-}
-
+Then, design a program that can match the JSON path with the above table to obtain the location information of the path in main_flow.
+Subsequently, reference issues can be determined by comparing the following location information.
 "var_in_if_block": {
     "block_order": int,
     "total_branch": int,
@@ -158,7 +156,7 @@ def match_path_to_control_flow(path: Path | SpecialPosition, control_flow) -> Op
     except:
         return None
 
-    # 检查block是否存在
+    # Check if the block exists
     if block in control_flow:
         block_data = control_flow[block]
 
@@ -172,7 +170,7 @@ def match_path_to_control_flow(path: Path | SpecialPosition, control_flow) -> Op
                     command_order=commands[command]
                 )
 
-        # 对于if_block
+        # For if block
         elif branch:
             if branch in block_data:
                 branch_data = block_data[branch]
@@ -193,30 +191,17 @@ def match_path_to_control_flow(path: Path | SpecialPosition, control_flow) -> Op
 
 class VarManagement:
     """
-    self.global_vars 是一个保存了全局变量的字典结构：
-        其中每一个键值对中，键名就是 变量名， 键值则是该变量包含的一些信息
-        其示意结构如下：
+    `self.global_vars` is a dictionary structure that stores global variables:
+            Each key-value pair in it, the key is the variable name, and the value is some information contained by the variable.
 
-
-    self.temp_vars 是一个保存了临时变量的字典结构
-        其中每一个键值对中，键名就是 变量名， 键值则是该变量包含的一些信息
-        其事以结构如下：
+    `self.temp_vars` is a dictionary structure that stores temporary variables:
+            Each key-value pair in it, the key is the variable name, and the value is some information contained by the variable.
     """
-    def __init__(self, variables):  # 修改参数名以避免潜在的命名冲突
+    def __init__(self, variables):
         self.global_vars = {var_name: var_info for var_name, var_info in variables.items()}
         self.temp_vars: Dict[str, TempVar] = {}
 
     def variable_existence_check(self, to_check_var: Dict[str, str | CommandPosition | None | SpecialPosition]) -> Result:
-        """
-        参数to_check_var的结构：
-        {
-            'var_name': str,
-            'command_position': {
-
-
-        :param to_check_var:
-        :return:
-        """
         for global_var_name, global_var in self.global_vars.items():
             if global_var_name == to_check_var['var_name']:
                 return Success("The global variable exists!")
@@ -232,24 +217,24 @@ class VarManagement:
                     return Success(None)
         for temp_var_name, temp_var in self.temp_vars.items():
             if temp_var_name == to_check_var['var_name']:
-                # 开始比较作用域，先判断变量的首次声明是否在IF_BLOCK中
-                # 如果变量的首次声明在IF_BLOCK中
+                # Start comparing scopes to see if the first declaration of the variable is in IF_BLOCK
+                # If the first declaration of the variable is in IF_BLOCK
                 if temp_var['append_position']['total_branch']:
                     if temp_var['append_position']['block_order'] > to_check_var['command_position']['block_order']:
                         return Failure(f"The reference to the variable {temp_var_name} was made before its declaration.")
-                    # 如果对于此变量的引用和申明处在同一个IF_BLOCK中，则首先要确定变量申明的分支中是否有此次进行引用的分if分支
+                    # if the reference and declaration for this variable are in the same IF_BLOCK, first determine whether the branch of the variable declaration has the sub-if branch for which the reference is made
                     elif temp_var['append_position']['block_order'] == to_check_var['command_position']['block_order']:
-                        # 如果引用分支在申明分支中，还需要进入深入的比较
+                        # If the reference branch is in the claim branch, you also need to go into an in-depth comparison
                         ref_branch = next(iter(to_check_var['command_position']['command_order']))
                         if ref_branch in temp_var['append_position']['command_order']:
-                            # 如果在此分支中，引用在申明之前，则报错
+                            # If the reference comes before the declaration in this branch, then an error is thrown
                             if temp_var['append_position']['command_order'][ref_branch] > to_check_var['command_position']['command_order'][ref_branch]:
                                 return Failure(f"The reference to the variable {temp_var_name} was made before its declaration.")
                             else:
                                 return Success('References to variables are reasonable')
                         else:
                             return Failure('The variable is declared only in other branches of the same IF_BLOCK.')
-                    # 当添加位置的block_order比此次引用前，
+                    # When adding the block order of the location than before this reference,
                     else:
                         branch_num = len(temp_var['append_position']['command_order'])
                         if branch_num == temp_var['append_position']['total_branch']:
@@ -266,18 +251,18 @@ class VarManagement:
                             return Failure(f"The reference to the variable {temp_var_name} was made before its declaration.")
                     else:
                         return Failure(f"The reference to the variable {temp_var_name} was made before its declaration.")
-                # 如果temp_var的声明时间比此次引用时间找
+                # if temp var declaration time is greater than this reference time
         return Failure(f"This variable '{to_check_var['var_name']}' is not declared")
 
     def append_temp_var(self, temp_var_info: dict) -> Result:
         temp_var_name = temp_var_info['var_name']
         exist_var_info = self.get_var(var_name=temp_var_name)
-        # 判断是否已在变变量管理中存在
+        # check if it exists in mutable management
         if isinstance(exist_var_info, Success):
-            # 查看是否为全局变量，如果是则报错 ‘命名冲突’
+            # check if it's global, if it is, give an error 'name conflict'
             if exist_var_info.value['is_global']:
                 return Failure("There is a naming conflict due to the existence of globally scoped variables with identical names.")
-            # 如果是临时变量，那就做一系列深入的比较
+            # If temporary, do a series of in-depth comparisons
             else:
                 if self.temp_vars[temp_var_name]['append_position']['block_order'] < temp_var_info['append_position']['block_order']:
                     return Failure(f"The variable '{temp_var_name}' has already been declared earlier, so the current declaration will not take effect.")
@@ -286,15 +271,15 @@ class VarManagement:
                         branch = next(iter(temp_var_info['append_position']['command_order']))
                         if branch in self.temp_vars[temp_var_name]['append_position']['command_order']:
                             if self.temp_vars[temp_var_name]['append_position']['command_order']['branch'] > temp_var_info['append_position']['command_order'][branch]:
-                                # 其实此处应该改成Warning内容，因为按照顺序来说，前面的声明变量应该会先被记录，按理来说只在主流中分析时不会出现这种情况
-                                # 但仍然应该将前面的申明进行重新记录
+                                # should have been replaced with Warning because, in order, the previously declared variables should have been logged first, which should presumably not be the case when analyzed in mainstream
+                                # But the previous claim should still be re-documented
                                 self.temp_vars[temp_var_name]['type'] = temp_var_info['var_type']
                                 self.temp_vars[temp_var_name]["append_position"]['command_order']['branch'] = temp_var_info['append_position']['command_order'][branch]
                                 return Failure(f"This variable '{temp_var_name}' is redeclared later in the code, but the current declaration will take precedence.")
                             else:
                                 return Failure(f"The variable '{temp_var_name}' has already been declared earlier, so the current declaration will not take effect.")
                         else:
-                            # 说明在这个if_block中，变量在其他的分支有申明
+                            # indicates that in this if_block, variables are declared in other branches
                             self.temp_vars[temp_var_name]['append_position']['command_order'][branch] = temp_var_info['append_position']['command_order'][branch]
                             return Success("The variable declaration has been noted in this branch.")
                     else:
@@ -322,9 +307,6 @@ class VarManagement:
 
 
 class APIManagement:
-    """
-
-    """
     def __init__(self, apis):
         self.apis = {api_name: api_info for api_name, api_info in apis.items()}
 
@@ -670,7 +652,7 @@ class NodeVisitor:
                     return Failure(f"Type '{actual_type_name}' not found.")
 
                 if actual_type != expected_type:
-                    # 创建实际类型的实例并验证
+                    # Create an instance of the actual type and verify it
                     actual_instance = create_instance(actual_type)
                     if expected_type in [int, float, bool, dict, list, str]:
                         if isinstance(actual_instance, expected_type):
@@ -711,7 +693,7 @@ class NodeVisitor:
 
             api_info = api_info_result.value
 
-            # 检查实参和形参是否匹配
+            # Check whether the arguments and parameters match
             parameters = set(api_info['paras'].keys())
             arguments = set(call_content['paras'].keys())
             extra_paras = arguments - parameters
@@ -737,7 +719,7 @@ class NodeVisitor:
                     )
                 )
 
-            # 对每个参数进行类型检查
+            # Type check for each parameter
             for match_para in match_paras:
                 var_name = call_content['paras'][match_para]
                 expected_type_name = api_info['paras'][match_para]
@@ -756,7 +738,7 @@ class NodeVisitor:
                         )
                     )
 
-            # 对返回值进行类型检查
+            # Type check the return value
             if api_info.get('return'):
                 if call_content.get('response'):
                     response = call_content['response']
@@ -778,9 +760,6 @@ class NodeVisitor:
                                     error_reason=f"Response variable '{var_name}' has problem: {type_check_result.message}",
                                 )
                             )
-                    else:
-                        # 如果操作不是 SET，可能不需要检查类型
-                        pass
                 else:
                     error_list.append(
                         Error(
@@ -802,26 +781,6 @@ class NodeVisitor:
                     )
 
         return error_list
-
-    # def command_operation_check(self):
-    #     commands = self.find_keys(pattern="command*")
-    #     for path, command_content in commands.items():
-    #         if 'result' in command_content:
-    #
-    #         elif 'response' in command_content:
-    #             if 'var_name' in command_content['response']:
-    #                 temp_var = {
-    #                     'var_name': command_content['result']['var_name'],
-    #                     'var_type': command_content['result']['var_type'],
-    #                     'append_position': command_position,
-    #                 }
-    #         elif 'value' in command_content:
-    #             if 'var_name' in command_content['value']:
-    #                 temp_var = {
-    #                     'var_name': command_content['result']['var_name'],
-    #                     'var_type': command_content['result']['var_type'],
-    #                     'append_position': command_position,
-    #                 }
 
 
 if __name__ == "__main__":
