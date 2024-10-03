@@ -1,5 +1,6 @@
 # CNLP Project
 
+
 ## Experiments
 
 
@@ -33,3 +34,7 @@ python main.py
 cd ./experiment/RQ3
 python main.py
 ```
+
+
+## Other Explanations
+The content of the 'src' directory is identical to that of 'experiment/RQ3/src', allowing you to directly review the Linter content.
