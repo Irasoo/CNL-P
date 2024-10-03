@@ -1,6 +1,6 @@
 # CNLP Project
 
-## Running Experiments
+## Experiments
 
 
 ### Prerequisites
