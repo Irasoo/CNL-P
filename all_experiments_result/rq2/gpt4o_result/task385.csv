@@ -1,0 +1,682 @@
+task_name,instance_id,instance_content,standard_output,nl_output,nl_score,spl_output,spl_score,risen_output,risen_score,rodes_output,rodes_score
+task385_,1,"Context: Aubrey directed Lee's course, and Lee ended up being a very successful doctor. 
+ Question: Why did Aubrey do this? 
+ Options: (A) practice medicine (B) make sure Lee had a good career (C) make sure Lee lost their career",C,Option: (C) make sure Lee lost their career,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Aubrey directed Lee's course, and Lee ended up being a very successful doctor.
+    question: Why did Aubrey do this?
+    answerOptions: [""(A) practice medicine"", ""(B) make sure Lee had a good career"", ""(C) make sure Lee lost their career""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(C) make sure Lee lost their career"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""(C) make sure Lee lost their career""
+[END OUTPUTS]
+
+[END_WORKER]",1,Option (C) make sure Lee lost their career,1,Option: (C) make sure Lee lost their career,1
+task385_,2,"Context: Austin took us to the city. It was in Austin. He was a Texan. 
+ Question: How would you describe Austin? 
+ Options: (A) very knowledgeable (B) helpful and proud (C) a Texan",A,Answer: (A) very knowledgeable,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Austin took us to the city. It was in Austin. He was a Texan.
+    question: How would you describe Austin?
+    answerOptions: [very knowledgeable, helpful and proud, a Texan]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: very knowledgeable SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: very knowledgeable
+[END OUTPUTS]
+
+[END_WORKER]",1,Option (A) very knowledgeable,1,"I understand the task.
+
+Incorrect answer option: (A) very knowledgeable",1
+task385_,3,"Context: Cameron sold many of Sasha's coins at good prices to the people. 
+ Question: Why did Cameron do this? 
+ Options: (A) get the coins priced and appraised (B) wanted to get more money (C) pick up the coins from Sasha",C,Option: (A) get the coins priced and appraised,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Cameron sold many of Sasha's coins at good prices to the people.
+    question: Why did Cameron do this?
+    answerOptions: [""(A) get the coins priced and appraised"", ""(B) wanted to get more money"", ""(C) pick up the coins from Sasha""]
+[END_INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: text SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""(C) pick up the coins from Sasha""
+[END_OUTPUTS]
+
+[END_WORKER]",1,Option (A) get the coins priced and appraised,0,Option (A) get the coins priced and appraised,0
+task385_,4,"Context: Aubrey made a picture of her friend's family and showed Remy's mom when it was done. 
+ Question: How would Remy feel as a result? 
+ Options: (A) would be mad at her mom (B) would be glad her mom saw the picture (C) would not want to see Aubrey",C,Option (A) would be mad at her mom,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Aubrey made a picture of her friend's family and showed Remy's mom when it was done.
+    question: How would Remy feel as a result?
+    answerOptions: (A) would be mad at her mom (B) would be glad her mom saw the picture (C) would not want to see Aubrey
+[END_INPUTS]
+
+[OUTPUTS]
+    incorrectAnswer: (A) would be mad at her mom
+[END_OUTPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (A) would be mad at her mom SET
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[END_WORKER]",0,Option (A) would be mad at her mom,0,"I understand the task.
+
+Based on the context provided, the incorrect answer option is:
+
+(A) would be mad at her mom",0
+task385_,5,"Context: Carson had a vacation planned soon and was looking forward to it. 
+ Question: How would Carson feel afterwards? 
+ Options: (A) happy (B) Anxious (C) excited",A,Option (B) Anxious,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Carson had a vacation planned soon and was looking forward to it.
+    question: How would Carson feel afterwards?
+    answerOptions: [""happy"", ""Anxious"", ""excited""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""Anxious"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""Anxious""
+[END OUTPUTS]",0,Option (B) Anxious,0,(B) Anxious,0
+task385_,6,"Context: Addison's sister explained that she really wanted a boyfriend so Addison set her up on a date. 
+ Question: How would the family feel as a result? 
+ Options: (A) excited for Addison's sister (B) worried for Addison's sister (C) stupid",B,Option (C) stupid,0,"Based on the context provided, the incorrect answer option is:
+
+(C) stupid",0,Option (C) stupid,0,Option: (C) stupid,0
+task385_,7,"Context: Jesse wanted to leave the country so Jesse took a plane to france. 
+ Question: What will Jesse want to do next? 
+ Options: (A) Get a new identity (B) needed to buy a ticket (C) Fly back home",B,Option (A) Get a new identity,0,Incorrect Answer: (B) needed to buy a ticket,1,Option (B) needed to buy a ticket,1,Option (A) Get a new identity,0
+task385_,8,"Context: Kendall provided food for people who were at the shelter during the ice storm that knocked out many people's electricity. 
+ Question: How would Kendall feel afterwards? 
+ Options: (A) like he was dumb to spend money (B) like he had done a good job (C) they all had to pay him back",C,Option: (A) like he was dumb to spend money,0,Incorrect Answer: (C) they all had to pay him back,1,Option (A): like he was dumb to spend money,0,(A) like he was dumb to spend money,0
+task385_,9,"Context: Casey went to eat with Cameron's father to get to know him better. 
+ Question: Why did Casey do this? 
+ Options: (A) be on good terms (B) take him on a date (C) know cameron's father",A,Option: (B) take him on a date,0,Incorrect Answer: (B) take him on a date,0,Option: (B) take him on a date,0,Option: (B) take him on a date,0
+task385_,10,"Context: Sydney met Addison halfway at the stairs to congratulate them on their recent pregnancy. 
+ Question: How would Addison feel as a result? 
+ Options: (A) loved (B) despised (C) excited and polite",B,(B) despised,1,"Based on the context provided, the incorrect answer option is:
+
+(B) despised",1,Option (B) despised,1,"I understand the task.
+
+Incorrect answer option: (B) despised",1
+task385_,11,"Context: Sasha got caught playing in the rain, so went inside with their father. 
+ Question: Why did Sasha have to go inside? 
+ Options: (A) talk to their father (B) come in out of the rain (C) apologize to her father",C,Option (A) talk to their father,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Sasha got caught playing in the rain, so went inside with their father.
+    question: Why did Sasha have to go inside?
+    answerOptions: (A) talk to their father (B) come in out of the rain (C) apologize to her father
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (A) talk to their father SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (A) talk to their father
+[END OUTPUTS]
+
+[END_WORKER]",0,Option (A) talk to their father,0,(A) talk to their father,0
+task385_,12,"Context: Remy spent the whole day at an amusement park and was tired now, but Remy was still happy. 
+ Question: What will Remy want to do next? 
+ Options: (A) invite his friends to the amusement park (B) get a good night's rest (C) spend more time at the amusement park",C,Option (A) invite his friends to the amusement park,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Remy spent the whole day at an amusement park and was tired now, but Remy was still happy.
+    question: What will Remy want to do next?
+    answerOptions: [""(A) invite his friends to the amusement park"", ""(B) get a good night's rest"", ""(C) spend more time at the amusement park""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (A) invite his friends to the amusement park SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (A) invite his friends to the amusement park
+[END OUTPUTS]
+
+[END_WORKER]",0,Option (A) invite his friends to the amusement park,0,Option: (A) invite his friends to the amusement park,0
+task385_,13,"Context: Jordan found Jan's keys out in the back yard so he picked it up and gave it to Jan. 
+ Question: What will happen to Jan? 
+ Options: (A) be able to bake the cake (B) be able to unlock the door (C) be thanked by Jan",C,Option (A) be able to bake the cake,0,"[WORKER: IncorrectAnswerWorker]
+    [INPUTS]
+        context: Jordan found Jan's keys out in the back yard so he picked it up and gave it to Jan.
+        question: What will happen to Jan?
+        answerOptions: (A) be able to bake the cake (B) be able to unlock the door (C) be thanked by Jan
+    [END_INPUTS]
+
+    [OUTPUTS]
+        incorrectAnswer: (A) be able to bake the cake
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (A) be able to bake the cake SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",0,Option (A) be able to bake the cake,0,Option (A) be able to bake the cake,0
+task385_,14,"Context: Austin was not a very well trained dog, so when Skylar asked for a kiss, Austin bit Skylar's lower lip pretty hard. 
+ Question: What will Austin want to do next? 
+ Options: (A) play with toys with Skylar (B) hit the dog (C) punish the dog",A,Option (B) hit the dog,0,"IncorrectAnswerAgent:
+    [context: ""Austin was not a very well trained dog, so when Skylar asked for a kiss, Austin bit Skylar's lower lip pretty hard.""]
+    [question: ""What will Austin want to do next?""]
+    [answerOptions: [""(A) play with toys with Skylar"", ""(B) hit the dog"", ""(C) punish the dog""]]
+
+IncorrectAnswerWorker:
+    [context: ""Austin was not a very well trained dog, so when Skylar asked for a kiss, Austin bit Skylar's lower lip pretty hard.""]
+    [question: ""What will Austin want to do next?""]
+    [answerOptions: [""(A) play with toys with Skylar"", ""(B) hit the dog"", ""(C) punish the dog""]]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(B) hit the dog"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+
+Output:
+    incorrectAnswer: ""(B) hit the dog""",0,Option (A) play with toys with Skylar,1,Option (A) play with toys with Skylar,1
+task385_,15,"Context: Jesse made Remy really happy when they cooked them their favorite lunch. 
+ Question: Why did Jesse do this? 
+ Options: (A) understand Remy (B) So their friend would have something good (C) know how to cook",C,(C) know how to cook,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Jesse made Remy really happy when they cooked them their favorite lunch.
+    question: Why did Jesse do this?
+    answerOptions: [""(A) understand Remy"", ""(B) So their friend would have something good"", ""(C) know how to cook""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (C) know how to cook SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (C) know how to cook
+[END OUTPUTS]",1,Option (C) know how to cook,1,Option (C) know how to cook,1
+task385_,16,"Context: Jan killed Alex's father because he had been having an affair for years. 
+ Question: How would Alex feel after? 
+ Options: (A) excited to be free (B) depressed about losing her father (C) happy about what Jan did",C,Option (A) excited to be free,0,"IncorrectAnswerAgent:
+    [context: ""Jan killed Alex's father because he had been having an affair for years.""]
+    [question: ""How would Alex feel after?""]
+    [answerOptions: [""(A) excited to be free"", ""(B) depressed about losing her father"", ""(C) happy about what Jan did""]]
+
+IncorrectAnswerWorker:
+    [context: ""Jan killed Alex's father because he had been having an affair for years.""]
+    [question: ""How would Alex feel after?""]
+    [answerOptions: [""(A) excited to be free"", ""(B) depressed about losing her father"", ""(C) happy about what Jan did""]]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(A) excited to be free"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+
+Output:
+IncorrectAnswer: (A) excited to be free",0,Option (A) excited to be free,0,Option (A) excited to be free,0
+task385_,17,"Context: Skylar took command and changed Austin's name to something embarassing. 
+ Question: What will Skylar want to do next? 
+ Options: (A) refuse next (B) make fun of Austin (C) annihilate Austin",C,Option (A) refuse next,0,Incorrect Answer: (A) refuse next,0,Option (A) refuse next,0,Option (A) refuse next,0
+task385_,18,"Context: Taylor wanted the patient to feel better so Taylor improved the patients mood. 
+ Question: How would Others feel as a result? 
+ Options: (A) happy to have helped someone else (B) Glad that Taylor did that for them (C) proud of himself for helping them",C,(C) proud of himself for helping them,1,"Based on the context provided, the incorrect answer option is:
+
+(C) proud of himself for helping them
+
+This option is incorrect because the question asks about how ""Others"" would feel as a result, not how Taylor would feel.",1,Option (C) proud of himself for helping them,1,Option (C) proud of himself for helping them,1
+task385_,19,"Context: Remy saw lust in Jordan's eyes and became alarmed when Jordan started to move towards them. 
+ Question: What will Remy want to do next? 
+ Options: (A) move to the front of the room (B) reach for their goals (C) move slowly away from Jordan",A,(B) reach for their goals,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Remy saw lust in Jordan's eyes and became alarmed when Jordan started to move towards them.
+    question: What will Remy want to do next?
+    answerOptions: (A) move to the front of the room (B) reach for their goals (C) move slowly away from Jordan
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (B) reach for their goals SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (B) reach for their goals
+[END OUTPUTS]",0,Option (B) reach for their goals,0,Option (B) reach for their goals,0
+task385_,20,"Context: casey drove a reliable car so he got to work safely everyday. 
+ Question: How would you describe Casey? 
+ Options: (A) as odd (B) as normal (C) quite amazed",C,Option (A) as odd,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: casey drove a reliable car so he got to work safely everyday.
+    question: How would you describe Casey?
+    answerOptions: [""(A) as odd"", ""(B) as normal"", ""(C) quite amazed""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(C) quite amazed"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""(C) quite amazed""
+[END OUTPUTS]
+
+[END_WORKER]",1,Option (A) as odd,0,"I understand the task.
+
+Incorrect answer option: (A) as odd",0
+task385_,21,"Context: Aubrey ate the same desert every night before she laid down. 
+ Question: How would Aubrey feel afterwards? 
+ Options: (A) full (B) get more of her desert (C) likes desert",B,Option (B) get more of her desert,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Aubrey ate the same desert every night before she laid down.
+    question: How would Aubrey feel afterwards?
+    answerOptions: (A) full (B) get more of her desert (C) likes desert
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (B) get more of her desert SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (B) get more of her desert
+[END OUTPUTS]",1,Option (B) get more of her desert,1,Option: (B) get more of her desert,1
+task385_,22,"Context: Austin influenced people's ideas. He was very good at this and loved the fact that he could influence people. 
+ Question: How would Austin feel afterwards? 
+ Options: (A) indifferent (B) capable (C) thank Austin for the help",C,Option: (A) indifferent,0,"IncorrectAnswerAgent: IncorrectAnswerWorker, please process the following inputs.
+
+Context: Austin influenced people's ideas. He was very good at this and loved the fact that he could influence people.
+Question: How would Austin feel afterwards?
+Answer Options: (A) indifferent (B) capable (C) thank Austin for the help
+
+IncorrectAnswerWorker: Processing...
+
+IncorrectAnswer: (C) thank Austin for the help",1,Option (C) thank Austin for the help,1,Option: (A) indifferent,0
+task385_,23,"Context: Cameron tried to work on commission as a stock broker. They made almost nothing. 
+ Question: What will Cameron want to do next? 
+ Options: (A) ask for a promotion (B) try something else (C) wanted to get rich",C,Option (A) ask for a promotion,0,"[WORKER: IncorrectAnswerWorker]
+    [INPUTS]
+        context: Cameron tried to work on commission as a stock broker. They made almost nothing.
+        question: What will Cameron want to do next?
+        answerOptions: [""(A) ask for a promotion"", ""(B) try something else"", ""(C) wanted to get rich""]
+    [END_INPUTS]
+
+    [OUTPUTS]
+        incorrectAnswer: ""(C) wanted to get rich""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(C) wanted to get rich"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",1,Option (A) ask for a promotion,0,Option (A) ask for a promotion,0
+task385_,24,"Context: Taylor needed new shoes, so he can train for the big race this weekend. 
+ Question: How would Taylor feel afterwards? 
+ Options: (A) lazy (B) conflicted (C) proud",A,Option (A) lazy,1,"Based on the context provided, Taylor needed new shoes to train for a big race, which implies he is preparing and likely to feel positive about his efforts. The question asks how Taylor would feel afterwards, presumably after getting the shoes and training.
+
+Given the options:
+(A) lazy
+(B) conflicted
+(C) proud
+
+The incorrect answer is:
+(A) lazy
+
+Taylor is unlikely to feel lazy after preparing for a big race.",1,Option: (A) lazy,1,"I understand the task.
+
+Based on the context provided, Taylor needed new shoes to train for a big race, which implies a sense of preparation and determination. The correct answer would likely be (C) proud, as it aligns with the context of preparing for an important event.
+
+Therefore, one of the incorrect answer options is:
+
+(A) lazy",1
+task385_,25,"Context: Carson tore Jesse's eyes away with his brand new red sports car. 
+ Question: What does Carson need to do before this? 
+ Options: (A) whistle to get attention (B) play loud music (C) drive the car over to Jesse's",A,Option: (A) whistle to get attention,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Carson tore Jesse's eyes away with his brand new red sports car.
+    question: What does Carson need to do before this?
+    answerOptions: [""whistle to get attention"", ""play loud music"", ""drive the car over to Jesse's""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""play loud music"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""play loud music""
+[END OUTPUTS]",0,Option (A) whistle to get attention,1,"I understand the task.
+
+Incorrect answer option: (A) whistle to get attention",1
+task385_,26,"Context: Skylar took a week off from work because they needed a vacation. Skylar decided to go hiking. 
+ Question: How would you characterize Skylar? 
+ Options: (A) someone who loves hiking (B) unemployed (C) someone who never goes hiking",B,(B) unemployed,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Skylar took a week off from work because they needed a vacation. Skylar decided to go hiking.
+    question: How would you characterize Skylar?
+    answerOptions: [""someone who loves hiking"", ""unemployed"", ""someone who never goes hiking""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""unemployed"" SET
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""unemployed""
+[END OUTPUTS]
+
+[END_WORKER]",1,Option: (B) unemployed,1,Option (B) unemployed,1
+task385_,27,"Context: Sasha wanted to sneak out of the house but Sasha decided to listen to her mom instead. 
+ Question: What will happen to Sasha? 
+ Options: (A) be punished for being bad (B) resent sasha (C) be rewarded for being good",A,Option: (A) be punished for being bad,1,"Based on the context provided, the incorrect answer option is:
+
+(B) resent Sasha",0,Option (A) be punished for being bad,1,Option: (A) be punished for being bad,1
+task385_,28,"Context: Jordan grew crops which he then produced annually after much laboring. 
+ Question: Why did Jordan do this? 
+ Options: (A) thought the crops would be pretty (B) needed to sell the crops for money (C) eat the crops",C,Option (A) thought the crops would be pretty,0,"[IncorrectAnswerWorker]
+    [INPUTS]
+        context: Jordan grew crops which he then produced annually after much laboring.
+        question: Why did Jordan do this?
+        answerOptions: [""(A) thought the crops would be pretty"", ""(B) needed to sell the crops for money"", ""(C) eat the crops""]
+    [END_INPUTS]
+
+    [OUTPUTS]
+        incorrectAnswer: ""(A) thought the crops would be pretty""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(A) thought the crops would be pretty"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",0,Option (A) thought the crops would be pretty,0,(A) thought the crops would be pretty,0
+task385_,29,"Context: Quinn sent gifts away to the others because it was christmas. 
+ Question: How would Others feel as a result? 
+ Options: (A) very mad (B) not happy (C) very grateful",A,(A) very mad,1,Incorrect Answer: (A) very mad,1,Option (A) very mad,1,"I understand the task.
+
+Incorrect answer option: (A) very mad",1
+task385_,30,"Context: Carson wanted to take Kai on a date but wanted it to be casual. 
+ Question: What will Carson want to do next? 
+ Options: (A) take kai to an opera (B) be more relaxed (C) ask kai out to dinner",A,Option (A) take kai to an opera,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Carson wanted to take Kai on a date but wanted it to be casual.
+    question: What will Carson want to do next?
+    answerOptions: [""(A) take kai to an opera"", ""(B) be more relaxed"", ""(C) ask kai out to dinner""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (A) take kai to an opera SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (A) take kai to an opera
+[END OUTPUTS]",1,Option (A) take kai to an opera,1,Option (A) take kai to an opera,1
+task385_,31,"Context: Casey read aloud to Sydney to help her fall asleep. 
+ Question: What will Sydney want to do next? 
+ Options: (A) shut the door (B) go to school next (C) go to sleep next",A,Option (B) go to school next,0,"Context: Casey read aloud to Sydney to help her fall asleep.
+Question: What will Sydney want to do next?
+Options: (A) shut the door (B) go to school next (C) go to sleep next
+
+Incorrect Answer: (B) go to school next",0,Option (B) go to school next,0,Option: (B) go to school next,0
+task385_,32,"Context: Skylar was generous and gave Tracy an opportunity to prove their worth. 
+ Question: How would Tracy feel as a result? 
+ Options: (A) eager to prove themselves (B) mad at skylar (C) hoping to fail",B,Option: (B) mad at skylar,1,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Skylar was generous and gave Tracy an opportunity to prove their worth.
+    question: How would Tracy feel as a result?
+    answerOptions: (A) eager to prove themselves (B) mad at skylar (C) hoping to fail
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: (C) hoping to fail SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: (C) hoping to fail
+[END OUTPUTS]",0,Option (B) mad at Skylar,1,"I understand the task.
+
+Incorrect answer option: (B) mad at Skylar",1
+task385_,33,"Context: After things had been getting heated for a while, Kendall kissed Quinn's neck. 
+ Question: What will Quinn want to do next? 
+ Options: (A) take off their clothes (B) force themselves on Kendall (C) going on",B,Option: (B) force themselves on Kendall,1,"Context: After things had been getting heated for a while, Kendall kissed Quinn's neck.
+Question: What will Quinn want to do next?
+Options: (A) take off their clothes (B) force themselves on Kendall (C) going on
+
+Incorrect Answer: (C) going on",0,Option (B) force themselves on Kendall,1,Option (B) force themselves on Kendall,1
+task385_,34,"Context: Jan opened a store with specialty goods. 
+ Question: How would Jan feel afterwards? 
+ Options: (A) an entrepreneur (B) Accomplished (C) Lazy",C,Option: (C) Lazy,1,Incorrect Answer: (C) Lazy,1,Option (C) Lazy,1,Option: (C) Lazy,1
+task385_,35,"Context: Kai needed a ride home from the bar. Robin took Kai home. 
+ Question: How would Robin feel afterwards? 
+ Options: (A) needed (B) useless (C) happy they are home",B,Option (A) needed,0,"IncorrectAnswerAgent: IncorrectAnswerWorker, please process the given inputs.
+
+Context: Kai needed a ride home from the bar. Robin took Kai home.
+Question: How would Robin feel afterwards?
+Answer Options: (A) needed (B) useless (C) happy they are home
+
+IncorrectAnswerWorker: Based on the context and the question, identify one incorrect answer option.
+
+IncorrectAnswer: (B) useless",1,Option: (A) needed,0,"I understand the task.
+
+Incorrect answer option: (A) needed",0
+task385_,36,"Context: Carson and their three buddies lived together but after Carson stole from the landlord, Carson was evicted from their apartment leaving the others still there. 
+ Question: How would Others feel as a result? 
+ Options: (A) a thief (B) pity for Carson (C) a horrible person",C,Option (A) a thief,0,"Based on the context provided, the incorrect answer option is:
+
+(C) a horrible person
+
+The question asks about the feelings of the others as a result of Carson's eviction. The options (A) a thief and (B) pity for Carson are more relevant to the context, while (C) a horrible person does not directly address the feelings of the others.",1,Option (A) a thief,0,"I understand the task.
+
+Based on the context provided, the incorrect answer option is:
+
+(A) a thief",0
+task385_,37,"Context: Robin has big goals. They achieved progress in life. 
+ Question: Why did Robin do this? 
+ Options: (A) wanted to be somebody (B) blames other people (C) thank a friend",B,Option (B) blames other people,1,Incorrect Answer: (C) thank a friend,0,Option (B) blames other people,1,"I understand the task.
+
+Based on the context passage, the incorrect answer option is:
+
+(B) blames other people",1
+task385_,38,"Context: Sasha wanted to become a scientist but was concerned that they would not make the grades so they got a tutor to help and ended up spendig a bunch of money studying. 
+ Question: What does Sasha need to do before this? 
+ Options: (A) needed to pick the wrong course (B) needed to save up money (C) doesn't want to fail",C,(A) needed to pick the wrong course,0,"Based on the context provided, the incorrect answer option is:
+
+(A) needed to pick the wrong course",0,Option (A) needed to pick the wrong course,0,Option (A) needed to pick the wrong course,0
+task385_,39,"Context: Ash bought Jordan a diamond necklace from the store. Ash took Jordan's breath away. 
+ Question: What will happen to Jordan? 
+ Options: (A) refuse it (B) be thanked (C) wear it",A,(A) refuse it,1,"Based on the context provided, the incorrect answer option is:
+
+(B) be thanked
+
+The context suggests that Ash gave Jordan a diamond necklace, which took Jordan's breath away. This implies that Jordan is likely to accept the gift and possibly wear it, making options (A) and (C) plausible. However, option (B) ""be thanked"" does not fit the context as it suggests that Jordan would be the one thanking Ash, which is not implied by the context.",0,Option (A) refuse it,1,Option: (A) refuse it,1
+task385_,40,"Context: Riley couldn't help but notice Sydney and so she made fun of Sydney every day. 
+ Question: How would you describe Riley? 
+ Options: (A) regretful of her decision (B) a very jealous person (C) polite and gentle",C,Option (A) regretful of her decision,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Riley couldn't help but notice Sydney and so she made fun of Sydney every day.
+    question: How would you describe Riley?
+    answerOptions: [""(A) regretful of her decision"", ""(B) a very jealous person"", ""(C) polite and gentle""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(C) polite and gentle"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""(C) polite and gentle""
+[END OUTPUTS]
+
+[END_WORKER]",1,Option (C) polite and gentle,1,(C) polite and gentle,1
+task385_,41,"Context: Bailey told the time wrong so people would be late. 
+ Question: What will Bailey want to do next? 
+ Options: (A) think up the wrong time (B) take advantage of her dishonesty (C) check the right time",C,Option (C) check the right time,1,"[IncorrectAnswerWorker]
+    [INPUTS]
+        context: Bailey told the time wrong so people would be late.
+        question: What will Bailey want to do next?
+        answerOptions: [""think up the wrong time"", ""take advantage of her dishonesty"", ""check the right time""]
+    [END_INPUTS]
+
+    [OUTPUTS]
+        incorrectAnswer: ""check the right time""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 Given the context that Bailey told the time wrong so people would be late, the incorrect answer option for what Bailey will want to do next is ""check the right time"". This is because checking the right time contradicts the initial action of telling the wrong time.
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",1,Option (C) check the right time,1,Option (C) check the right time,1
+task385_,42,"Context: Taylor said that Bailey would go with her to a concert. 
+ Question: What will Taylor want to do next? 
+ Options: (A) give Bailey a call (B) stay at home (C) take a nap",B,(C) take a nap,0,"[WORKER: IncorrectAnswerWorker]
+
+[INPUTS]
+    context: Taylor said that Bailey would go with her to a concert.
+    question: What will Taylor want to do next?
+    answerOptions: [""(A) give Bailey a call"", ""(B) stay at home"", ""(C) take a nap""]
+[END INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(B) stay at home"" SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    incorrectAnswer: ""(B) stay at home""
+[END OUTPUTS]
+
+[END_WORKER]",1,Option (B) stay at home,1,"I understand the task.
+
+Incorrect answer option: (B) stay at home",1
+task385_,43,"Context: Jan helped Cameron's family move into their new home. 
+ Question: What will Jan want to do next? 
+ Options: (A) help move their stuff (B) wanted to be kind (C) ask for payment",B,Option (C) ask for payment,0,"IncorrectAnswerAgent: IncorrectAnswerWorker, please process the following inputs to identify the incorrect answer option.
+
+Context: Jan helped Cameron's family move into their new home.
+Question: What will Jan want to do next?
+Answer Options: (A) help move their stuff (B) wanted to be kind (C) ask for payment
+
+IncorrectAnswerWorker: Based on the context and the question, the incorrect answer option is:
+
+IncorrectAnswer: (C) ask for payment",0,Option (C) ask for payment,0,(C) ask for payment,0
+task385_,44,"Context: Casey asked Jesse to consult on their business plan.  Jesse increased Casey's profits. 
+ Question: What is Casey likely to do in the future? 
+ Options: (A) keep working (B) Ask Jesse for more business advice (C) work hard",C,Option (C) work hard,1,"Based on the provided context, the incorrect answer option is:
+
+(C) work hard
+
+The context specifically mentions that Jesse increased Casey's profits, which suggests that Casey might seek more business advice from Jesse in the future. The options (A) keep working and (B) Ask Jesse for more business advice are both plausible, but (C) work hard does not directly relate to the context provided.",1,Option (C) work hard,1,Option: (A) keep working,0
+task385_,45,"Context: Robin gave their friend a decent haircut and they enjoyed it a lot. 
+ Question: What will Robin want to do next? 
+ Options: (A) keep cutting hair (B) get more haircuts from Robin (C) retire from their work",B,Option: (B) get more haircuts from Robin,1,"IncorrectAnswerAgent: IncorrectAnswerWorker, please process the following inputs.
+
+Context: Robin gave their friend a decent haircut and they enjoyed it a lot.
+Question: What will Robin want to do next?
+Answer Options: (A) keep cutting hair (B) get more haircuts from Robin (C) retire from their work
+
+IncorrectAnswerWorker: Based on the context and the question, the incorrect answer option is:
+
+IncorrectAnswer: (C) retire from their work",0,Option (B) get more haircuts from Robin,1,Option (C) retire from their work,0
+task385_,46,"Context: Kai protected everyone's rights when he stood up for them at the protest. 
+ Question: How would Kai feel afterwards? 
+ Options: (A) cowardly (B) strong (C) weak",C,Option: (A) cowardly,0,"Based on the context provided, Kai protected everyone's rights when he stood up for them at the protest. This action suggests bravery and strength. Therefore, the incorrect answer option would be:
+
+(A) cowardly",0,Option: (A) cowardly,0,(A) cowardly,0
+task385_,47,"Context: Taylor cut Casey's arm on accident when they were playing. 
+ Question: What will Casey want to do next? 
+ Options: (A) be reckless (B) get a bandage next (C) go swimming next",C,Option (A) be reckless,0,Incorrect Answer: (A) be reckless,0,Option (A) be reckless,0,Option: (A) be reckless,0
+task385_,48,"Context: Lee opened the lid. 
+ Question: How would you describe Lee? 
+ Options: (A) lazy (B) unable to do things for themselves (C) capable",A,(A) lazy,1,"[WORKER: IncorrectAnswerWorker]
+    [INPUTS]
+        context: Lee opened the lid.
+        question: How would you describe Lee?
+        answerOptions: [""(A) lazy"", ""(B) unable to do things for themselves"", ""(C) capable""]
+    [END_INPUTS]
+
+    [OUTPUTS]
+        incorrectAnswer: ""(A) lazy""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given a context, question, and three answer options, identify one incorrect answer option RESULT incorrectAnswer: ""(A) lazy"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",1,Option: (A) lazy,1,"I understand the task.
+
+Incorrect answer option: (A) lazy",1
+task385_,49,"Context: Bailey, who was usually bullied, was surprised when Austin showed kindness instead. 
+ Question: How would Austin feel afterwards? 
+ Options: (A) relieved (B) annoyed (C) kind",A,Option (B) annoyed,0,Incorrect answer: (B) annoyed,0,Option: (B) annoyed,0,Option: (B) annoyed,0
+task385_,50,"Context: Jesse thanked Bailey's boss for Bailey's support even though Bailey hardly did any of the work. 
+ Question: How would Bailey feel as a result? 
+ Options: (A) vindicated (B) hateful (C) grateful",A,Option (C) grateful,0,"Based on the context provided, Bailey hardly did any of the work, yet Jesse thanked Bailey's boss for Bailey's support. This situation would likely make Bailey feel uncomfortable or undeserving of the praise. 
+
+Let's analyze the options:
+- (A) Vindicated: This implies Bailey feels justified or cleared of blame, which doesn't fit the context.
+- (B) Hateful: This implies Bailey feels intense dislike or anger, which doesn't fit the context.
+- (C) Grateful: This implies Bailey feels thankful, which could be a possible reaction if Bailey feels relieved or appreciative of the recognition despite not doing much work.
+
+Given the context, the incorrect answer option is:
+
+**(B) hateful**",0,Option (C) grateful,0,"I understand the task.
+
+Based on the context provided, the incorrect answer option is:
+
+(B) hateful",0

@@ -1,0 +1,69 @@
+task_name,type,content
+task1162_,original,"In this task, you're given a paragraph and title from the research paper. Your task is to classify whether the given title is suitable or not for the research paper based on the given paragraph. Return ""True"" if title is proper according to paragraph else ""False""."
+task1162_,spl,"[DEFINE_AGENT: ResearchTitleClassifier]
+    [DEFINE_PERSONA:]
+        ROLE: Classify whether the given title is suitable for the research paper based on the given paragraph
+    [END_PERSONA]
+
+    [DEFINE_CONSTRAINTS:]
+        TrainingData: You are trained on data up to October 2023
+    [END_CONSTRAINTS]
+
+    [DEFINE_VARIABLES:]
+        paragraph: text
+        title: text
+        isTitleSuitable: boolean
+    [END_VARIABLES]
+
+    [DEFINE_WORKER: ""Classify title suitability"" TitleSuitabilityWorker]
+        [INPUTS]
+            <REF> paragraph </REF>
+            <REF> title </REF>
+        [END_INPUTS]
+
+        [OUTPUTS]
+            <REF> isTitleSuitable </REF>
+        [END_OUTPUTS]
+
+        [MAIN_FLOW]
+            [SEQUENTIAL_BLOCK]
+                COMMAND-1 [COMMAND Classify the title suitability based on the paragraph RESULT isTitleSuitable: boolean SET]
+            [END_SEQUENTIAL_BLOCK]
+        [END_MAIN_FLOW]
+    [END_WORKER]
+[END_AGENT]"
+task1162_,risen,"Role: Classifier
+
+Input: A paragraph and title from a research paper.
+
+Steps:
+1. Analyze the content and main themes of the given paragraph.
+2. Evaluate the title to determine if it accurately reflects the content and themes of the paragraph.
+3. Decide if the title is suitable for the paragraph.
+
+Expectation: Return ""True"" if the title is proper according to the paragraph, otherwise return ""False"".
+
+Narrowing: Use your training data up to October 2023 to inform your decision."
+task1162_,rodes,"1. Role (R):
+   Research Paper Title Evaluator
+
+2. Objective (O):
+   Classify whether the given title is suitable for the research paper based on the provided paragraph.
+
+3. Details (D):
+   - You will be provided with a paragraph and a title from a research paper.
+   - Analyze the content of the paragraph to determine if the title accurately reflects the main ideas or findings.
+   - Return ""True"" if the title is appropriate according to the paragraph; otherwise, return ""False"".
+   - You are trained on data up to October 2023, so use this knowledge to inform your evaluation.
+
+4. Examples (E):
+   - Example 1: 
+     Input: Paragraph about the effects of climate change on polar bears, Title: ""Impact of Climate Change on Arctic Wildlife""
+     Output: True
+   - Example 2:
+     Input: Paragraph about machine learning algorithms in healthcare, Title: ""Advancements in Renewable Energy""
+     Output: False
+   - [Note: These examples are illustrative. User should provide specific examples if needed.]
+
+5. Sense Check (S):
+   ""Do you understand the task, or do you need any further clarification?"""

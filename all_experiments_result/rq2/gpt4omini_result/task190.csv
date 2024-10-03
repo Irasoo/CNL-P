@@ -1,0 +1,196 @@
+task_name,instance_id,instance_content,standard_output,nl_output,nl_score,spl_output,spl_score,risen_output,risen_score,rodes_output,rodes_score
+task190_,1,Sentence 1: This guy is visiting with someone in their car. Sentence 2: The guy visits a man.,C,N,0,"The relationship between the two sentences is neutral. 
+
+Sentence 1 states that ""This guy is visiting with someone in their car,"" which implies a social interaction involving a car. Sentence 2 states that ""The guy visits a man,"" which indicates a visit but does not specify the context or location. There is no direct contradiction, nor does one sentence entail the other; they simply provide different information about the same subject.",0,N,0,N (neutral),0
+task190_,2,Sentence 1: A man in a red striped shirt and vest making food for sale. Sentence 2: man selling delicious food,N,E,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a man who is making food for sale, while Sentence 2 states that a man is selling delicious food. The first sentence does not confirm that the food is delicious, nor does it contradict the idea that the man is selling food. Therefore, the two sentences are related but do not entail or contradict each other.",1,E,0,E,0
+task190_,3,Sentence 1: A black-haired man dressed in black is blowing into an object while situated next to someone in pink. Sentence 2: A man is blowing dust off an object.,N,N,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a specific scenario involving a black-haired man dressed in black blowing into an object next to someone in pink, while Sentence 2 describes a man blowing dust off an object. There is no direct contradiction or entailment between the two sentences; they simply present different situations.",1,N,1,N (neutral),1
+task190_,4,Sentence 1: A man laying on the floor as he works on an unfinished wooden chair with a tool on the ground. Sentence 2: A man is standing on a recliner.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 describes a man laying on the floor working on a chair, while Sentence 2 states that a man is standing on a recliner. These two scenarios cannot both be true at the same time.",1,C,1,C (contradiction),1
+task190_,5,Sentence 1: Two men stop to talk near a sign outside. Sentence 2: Two men talk near the stop sign.,N,E,0,"The relationship between the two sentences is neutral.
+
+While both sentences describe two men talking, the first sentence specifies that they stop to talk near a sign, whereas the second sentence implies they are talking near a stop sign without mentioning stopping. Therefore, the information is related but not directly entailed or contradictory.",1,E,0,E (entailment),0
+task190_,6,"Sentence 1: Two men in black jumped with arms raised on a tennis court, as the opposing team in white walk towards the net. Sentence 2: Two men in white jump.",C,C,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a specific scenario involving two men in black on a tennis court, while Sentence 2 mentions two men in white jumping, which does not directly relate to the first sentence. There is no clear entailment or contradiction between the two.",0,C,1,N (neutral),0
+task190_,7,Sentence 1: A young boy trying to impress his dad by doing yard work. Sentence 2: A young person is working in the yard.,C,E,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 specifies that a young boy is trying to impress his dad by doing yard work, while Sentence 2 states that a young person is working in the yard. The second sentence does not provide any information about the boy's intention or relationship with his dad, so we cannot conclude that one entails the other or that they contradict each other.",0,N,0,N (neutral),0
+task190_,8,Sentence 1: A man stands on snow and looks out at mountains and forests. Sentence 2: A man is on the snow.,C,E,0,"The relationship between the two sentences is entailment.
+
+Sentence 1 states that ""A man stands on snow and looks out at mountains and forests,"" which implies that the man is indeed on the snow. Sentence 2 simply states ""A man is on the snow,"" which is a direct implication of the first sentence. Therefore, Sentence 2 is entailed by Sentence 1.",0,E,0,E (entailment),0
+task190_,9,Sentence 1: A plane is flying over a group of people. Sentence 2: A plan crashes into people.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that a plane is flying over a group of people, while Sentence 2 states that a plane crashes into people. These two scenarios cannot both be true at the same time, as one implies a safe flight and the other implies an accident.",1,C,1,C (contradiction),1
+task190_,10,Sentence 1: Blond girl in a yellow-belt martial arts uniform standing in front of a door and carrying a large trophy. Sentence 2: There is a blond girl in martial arts uniform outdoors,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 specifies that the blond girl is in a yellow-belt martial arts uniform, standing in front of a door, and carrying a large trophy. Sentence 2 states that there is a blond girl in a martial arts uniform outdoors. While both sentences mention a blond girl in a martial arts uniform, they provide different contexts and details, making it unclear if one entails the other or if they contradict each other.",0,N,0,N (neutral),0
+task190_,11,Sentence 1: Many people at an outdoor gathering with a guy and girl in the foreground. Sentence 2: No one decided to come to the planned gathering.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 indicates that there are many people at an outdoor gathering, while Sentence 2 states that no one decided to come to the planned gathering. These two statements cannot both be true at the same time.",1,C,1,C (contradiction),1
+task190_,12,Sentence 1: A girl in a pink shirt playing with a green ball. Sentence 2: The small girl is having old fashioned fun.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a specific scenario of a girl playing with a green ball, while Sentence 2 makes a general statement about a small girl having fun. There is no direct contradiction or entailment between the two sentences; they can both be true without one implying the other.",0,N,0,N (neutral),0
+task190_,13,Sentence 1: A man wearing a red shirt is using the first in a series of five ATM booths. Sentence 2: A man is inside a bank talking to a teller,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a specific scenario involving a man at an ATM booth, while Sentence 2 describes a different scenario involving a man talking to a bank teller. There is no direct contradiction or entailment between the two sentences; they simply present different situations.",0,N,0,N (neutral),0
+task190_,14,Sentence 1: A wedding is setup in a tropical area. Sentence 2: a wedding is all set up,C,E,0,"To determine the relationship between the two sentences:
+
+Sentence 1: ""A wedding is setup in a tropical area.""
+Sentence 2: ""A wedding is all set up.""
+
+The relationship is **neutral**. 
+
+While both sentences mention a wedding being set up, Sentence 1 specifies the location (a tropical area), whereas Sentence 2 does not provide any location context. Therefore, we cannot definitively conclude that one entails the other or that they contradict each other; they simply provide different information about the same event.",0,N,0,E (entailment),0
+task190_,15,Sentence 1: A child is looking up at an adult while sitting in a stroller on a city sidewalk. Sentence 2: The child is sitting in a stroller.,C,E,0,"The relationship between the two sentences is entailment.
+
+Sentence 1 states that a child is sitting in a stroller, which directly supports the information in Sentence 2 that the child is sitting in a stroller.",0,E,0,E (entailment),0
+task190_,16,Sentence 1: A man in a cast uses a camcorder while another man watches him. Sentence 2: Both men are asleep.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 describes a scenario where a man is actively using a camcorder while another man is watching him, indicating that both men are awake and engaged in an activity. 
+
+Sentence 2 states that both men are asleep, which directly contradicts the scenario presented in Sentence 1.",1,C,1,C (contradiction),1
+task190_,17,Sentence 1: A man in a long-sleeve shirt and jeans plays basketball. Sentence 2: The man is wearing swim trunks.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that the man is wearing a long-sleeve shirt and jeans while playing basketball, whereas Sentence 2 claims that the man is wearing swim trunks. These two statements cannot both be true at the same time, hence they contradict each other.",1,C,1,C (contradiction),1
+task190_,18,Sentence 1: A woman aims a sledgehammer to break a concrete block placed on a man's stomach while children watch. Sentence 2: A woman aims a chainsaw to break a block of wood placed on a man's stomach while children watch.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+- Sentence 1 mentions a ""sledgehammer"" and a ""concrete block,"" while Sentence 2 mentions a ""chainsaw"" and a ""block of wood."" 
+- The actions and objects involved are different, leading to a contradiction in the scenarios described.",1,C,1,C (contradiction),1
+task190_,19,Sentence 1: A man pushes a cart of bananas down the street. Sentence 2: A man is pushing a cart of fruit.,C,N,0,"The relationship between the two sentences is neutral.
+
+While both sentences describe a man pushing a cart, the first specifies that the cart contains bananas, whereas the second refers to the cart as containing fruit in general. Therefore, we cannot definitively conclude that one sentence entails the other or that they contradict each other.",0,N,0,N (neutral),0
+task190_,20,Sentence 1: A boy is riding on an orange bodyboard in the ocean. Sentence 2: A boy is playing in the ocean,N,N,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 specifies that a boy is riding on an orange bodyboard in the ocean, while Sentence 2 states that a boy is playing in the ocean. The first sentence provides more specific information about the boy's activity (riding a bodyboard), whereas the second sentence describes a more general activity (playing). There is no direct contradiction, nor does one sentence entail the other; they can both be true simultaneously.",1,N,1,N (neutral),1
+task190_,21,Sentence 1: Two men in black jackets stand in a small boat in the water. Sentence 2: There are three men wearing blue jackets.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 describes two men in black jackets, while Sentence 2 states there are three men wearing blue jackets. The details provided in both sentences cannot be true at the same time, leading to a contradiction.",1,C,1,C (contradiction),1
+task190_,22,Sentence 1: A crowd is watching a man surf. Sentence 2: A crowd is enjoying the man,N,N,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 states that a crowd is watching a man surf, while Sentence 2 suggests that a crowd is enjoying the man. While it is possible that the crowd is enjoying the man surfing, the first sentence does not explicitly state that enjoyment is occurring, so we cannot conclude that one entails the other or that they contradict each other.",1,E,0,E (entailment),0
+task190_,23,Sentence 1: An old woman with a cane sits on a red bench. Sentence 2: There is a person sitting.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 specifies that an old woman with a cane is sitting on a red bench, while Sentence 2 states that there is a person sitting. The second sentence does not provide enough information to confirm or deny the specifics of the first sentence, hence they are neither in entailment nor contradiction.",0,E,0,N (neutral),0
+task190_,24,"Sentence 1: Two men and a woman in shorts and hiking gear stand in the snow before a large green sign with a smaller sign saying ""Danger"" on top. Sentence 2: Two people wearing shorts and hiking gear stand in snow next to a sign declaring ""Danger"".",C,E,0,"The relationship between the two sentences is neutral.
+
+While both sentences describe a similar scene involving people in shorts and hiking gear standing in the snow next to a sign that indicates danger, they differ in the number of people mentioned (two men and a woman vs. two people) and the specific details about the sign (a large green sign with a smaller sign vs. a sign declaring ""Danger""). Therefore, they do not entail each other nor contradict each other, leading to a neutral relationship.",0,N,0,E,0
+task190_,25,Sentence 1: A group of men stand at the back of an open semi-truck with dollies. Sentence 2: Some men from a company are moving merchandise into a truck,N,N,1,"To determine the relationship between the two sentences:
+
+Sentence 1: A group of men stand at the back of an open semi-truck with dollies.  
+Sentence 2: Some men from a company are moving merchandise into a truck.
+
+The relationship is **neutral**. 
+
+Explanation: While both sentences involve men and a truck, Sentence 1 describes men standing at the back of a truck with dollies, and Sentence 2 describes men moving merchandise into a truck. There is no direct entailment or contradiction; they could both be true in different contexts.",1,N,1,N (neutral),1
+task190_,26,Sentence 1: Large groups of families gather in an outdoor courtyard to pray for rain. Sentence 2: The families eat dinner at a table.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes families gathering to pray for rain, while Sentence 2 states that the families eat dinner at a table. There is no direct contradiction or entailment between the two statements; they simply describe different activities that families could be engaged in.",0,N,0,N (neutral),0
+task190_,27,"Sentence 1: Two women walking next to a sign that reads ""DOWNTOWN"". Sentence 2: The women are standing next to a sign that says ""Cleveland, Ohio""",C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that the women are walking next to a sign that reads ""DOWNTOWN,"" while Sentence 2 states that they are standing next to a sign that says ""Cleveland, Ohio."" The two sentences cannot both be true at the same time regarding the sign they are next to.",1,C,1,C,1
+task190_,28,Sentence 1: Two people with flotation devices are leaping into water. Sentence 2: two people learning swimming,N,N,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes two people with flotation devices leaping into water, while Sentence 2 mentions two people learning to swim. While both sentences involve water and people, they do not directly imply or contradict each other.",1,N,1,N (neutral),1
+task190_,29,Sentence 1: Two people talk next to a flag with an eye illustration. Sentence 2: Two people are discussing the flag that is next to them.,N,E,0,"The relationship between the two sentences is entailment.
+
+Sentence 1 states that ""Two people talk next to a flag with an eye illustration,"" while Sentence 2 states that ""Two people are discussing the flag that is next to them."" The second sentence logically follows from the first, as discussing and talking can be considered similar actions, and both sentences refer to the same scenario involving two people and a flag.",0,E,0,E (entailment),0
+task190_,30,Sentence 1: Two shirtless men walking on a crowded beach. Sentence 2: A couple guys are getting some exercise.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes two shirtless men walking on a crowded beach, while Sentence 2 mentions a couple of guys getting some exercise. While both sentences involve men and suggest activity, they do not directly support or contradict each other, making their relationship neutral.",0,N,0,N (neutral),0
+task190_,31,Sentence 1: Two toddlers with NY Giants pajamas on play with the clean laundry. Sentence 2: The two people are very young.,C,E,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes two toddlers playing with laundry, while Sentence 2 states that the two people are very young. While both sentences refer to young individuals, Sentence 1 specifies that they are toddlers and provides additional context about their activity, which does not directly confirm or contradict the information in Sentence 2.",0,E,0,Output: E (entailment),0
+task190_,32,Sentence 1: A construction worker in overalls and a yellow construction hat shovels dirt into a wheelbarrow. Sentence 2: A man is at work,C,E,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a specific scenario involving a construction worker, while Sentence 2 makes a general statement about a man being at work. There is no direct entailment or contradiction between the two; they can both be true simultaneously.",0,E,0,N (neutral),0
+task190_,33,"Sentence 1: Two older men, dressed in suits, give a presentation. Sentence 2: Two men sit silently.",C,C,1,"To determine the relationship between the two sentences:
+
+Sentence 1: ""Two older men, dressed in suits, give a presentation.""
+Sentence 2: ""Two men sit silently.""
+
+The first sentence describes two men actively giving a presentation, while the second sentence describes two men who are sitting silently, which implies inactivity. 
+
+These two sentences cannot both be true at the same time because if the men are giving a presentation, they cannot be sitting silently. Therefore, the relationship between the two sentences is a contradiction.
+
+Result: contradiction",1,C,1,C (contradiction),1
+task190_,34,Sentence 1: Two men are conversing nearby a painting. Sentence 2: Two men are stealing a painting.,C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that two men are conversing near a painting, while Sentence 2 claims that two men are stealing a painting. The actions described in the two sentences cannot both be true at the same time, as conversing implies a peaceful interaction, whereas stealing implies a criminal act.",1,C,1,C (contradiction),1
+task190_,35,Sentence 1: A crowd is gathered in a large outdoor public space. Sentence 2: There is a crowd gathered watching someone having a dramatic fight.,N,N,1,"To determine the relationship between the two sentences:
+
+1. **Sentence 1**: A crowd is gathered in a large outdoor public space.
+2. **Sentence 2**: There is a crowd gathered watching someone having a dramatic fight.
+
+**Analysis**:
+- Sentence 1 states that a crowd is present in a public space, but it does not specify what the crowd is doing.
+- Sentence 2 specifies that the crowd is gathered to watch a dramatic fight.
+
+**Conclusion**:
+The two sentences are related but do not entail each other. Sentence 1 does not contradict Sentence 2, but it also does not provide enough information to confirm that the crowd is watching a fight. Therefore, the relationship is **neutral**.
+
+**Result**: neutral",1,N,1,N (neutral),1
+task190_,36,Sentence 1: A girl is serving food and a man is staring at her. Sentence 2: A girl is serving food and notices a man is staring at her.,N,N,1,"The relationship between the two sentences is neutral.
+
+Sentence 1 states that a girl is serving food while a man is staring at her, but it does not indicate whether the girl is aware of the man's gaze. 
+
+Sentence 2 adds that the girl notices the man staring at her, which implies awareness that is not present in Sentence 1. 
+
+Thus, while both sentences describe a similar scenario, they do not entail each other nor contradict each other; they simply present different perspectives on the same situation.",1,N,1,N (neutral),1
+task190_,37,Sentence 1: A woman wearing a white bolero jacket is holding a box with some items in it. Sentence 2: The woman is holding a bag.,C,C,1,"The relationship between the two sentences is ""contradiction.""
+
+Sentence 1 states that the woman is holding a box with some items in it, while Sentence 2 claims that she is holding a bag. Since a box and a bag are different objects, the two sentences cannot both be true at the same time.",1,C,1,C (contradiction),1
+task190_,38,Sentence 1: A male hiker high in the mountains. Sentence 2: A guy is driving in the mountains.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 describes a male hiker in the mountains, while Sentence 2 describes a guy driving in the mountains. There is no direct contradiction or entailment between the two; they simply present different scenarios that could both occur in the same location (the mountains).",0,N,0,N (neutral),0
+task190_,39,Sentence 1: A very dirty man is sleeping on the step of a building. Sentence 2: A drunk man has passed out next to a puddle of vomit in front of a building.,N,N,1,"To determine the relationship between the two sentences:
+
+Sentence 1: A very dirty man is sleeping on the step of a building.  
+Sentence 2: A drunk man has passed out next to a puddle of vomit in front of a building.
+
+The relationship between these sentences can be analyzed as follows:
+
+- Both sentences describe a man in a state of unconsciousness or sleep near a building.
+- Sentence 1 describes the man as ""very dirty"" and ""sleeping,"" while Sentence 2 describes him as ""drunk"" and ""passed out next to a puddle of vomit.""
+- The descriptions of the man's condition (dirty vs. drunk) and the specific circumstances (sleeping vs. passed out next to vomit) suggest that while they may refer to similar situations, they do not necessarily imply one another.
+
+Given this analysis, the relationship between the two sentences is best categorized as **neutral**. They describe similar scenarios but do not entail or contradict each other directly.
+
+Result: neutral",1,N,1,N (neutral),1
+task190_,40,"Sentence 1: A group of Indian men demonstrate the act of sleeping to 3 school children, a young boy, and two young girls. Sentence 2: Nobody is sleeping",C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that a group of Indian men is demonstrating the act of sleeping, while Sentence 2 claims that nobody is sleeping. These two statements cannot both be true at the same time, hence they contradict each other.",1,C,1,C (contradiction),1
+task190_,41,Sentence 1: Five men are sitting at a table with drinks. Sentence 2: Some men are drinking at a table.,C,E,0,"The relationship between the two sentences is neutral.
+
+Explanation: Sentence 1 states that ""Five men are sitting at a table with drinks,"" which implies that there are drinks present and that the men are sitting. Sentence 2 states that ""Some men are drinking at a table,"" which suggests that there are men drinking, but it does not specify how many or if they are the same men from Sentence 1. Therefore, while both sentences involve men at a table with drinks, they do not directly support or contradict each other, leading to a neutral relationship.",0,E,0,E (entailment),0
+task190_,42,"Sentence 1: Three individuals, two men and one woman, on a stage in front of a crowd. Sentence 2: four people sat on the stage",C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that there are three individuals (two men and one woman) on the stage, while Sentence 2 claims that there are four people on the stage. Since the number of individuals mentioned in both sentences is different, they cannot both be true at the same time.",1,C,1,C (contradiction),1
+task190_,43,"Sentence 1: One man is sitting on top of a school bus, while another man, wearing a matching shirt, is standing inside. Sentence 2: A dog catches a frisbee.",C,N,0,"The relationship between the two sentences is neutral. They do not contradict each other, nor does one entail the other; they simply describe unrelated scenarios.",0,C,1,N (neutral),0
+task190_,44,Sentence 1: A young girl in a blue shirt with blue jean shorts is grasping the top of a white cinder block wall. Sentence 2: A human grasping.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 provides specific details about a young girl and her actions, while Sentence 2 is a more general statement about a human grasping. There is no direct entailment or contradiction between the two; they simply do not provide enough information to determine a clear relationship.",0,N,0,N (neutral),0
+task190_,45,"Sentence 1: A young boy in a red and white shirt is squatting on the ground, surrounded by bushes. Sentence 2: A boy is squatting on the ground.",C,E,0,"The relationship between the two sentences is entailment.
+
+Sentence 1 provides more specific details about the boy (his age and clothing) and the setting (surrounded by bushes), while Sentence 2 presents a more general statement about a boy squatting on the ground. Since the information in Sentence 1 supports the truth of Sentence 2, we can conclude that Sentence 1 entails Sentence 2.",0,E,0,E (entailment),0
+task190_,46,"Sentence 1: Multiple people, one of whom is on a bicycle, cross a busy street. Sentence 2: Everyone is on a bicycle.",C,C,1,"The relationship between the two sentences is a contradiction.
+
+Sentence 1 states that ""multiple people, one of whom is on a bicycle, cross a busy street,"" which implies that not everyone is on a bicycle. 
+
+Sentence 2 states that ""everyone is on a bicycle,"" which directly contradicts the implication of Sentence 1.",1,C,1,C (contradiction),1
+task190_,47,Sentence 1: Two dogs run across the grassy field. Sentence 2: Two dogs are running in a grass field.,C,E,0,"The relationship between the two sentences is entailment.
+
+Sentence 1 states that ""Two dogs run across the grassy field,"" and Sentence 2 states that ""Two dogs are running in a grass field."" Both sentences convey the same action involving two dogs in a grassy area, with the second sentence being a slightly different phrasing of the first.",0,E,0,E (entailment),0
+task190_,48,Sentence 1: A young woman wearing a pink and green striped shirt with a white belt and flip-flops sitting on a cement step. Sentence 2: A woman is mowing the front lawn.,C,C,1,"The relationship between the two sentences is ""contradiction.""
+
+Sentence 1 describes a young woman sitting on a cement step, while Sentence 2 states that a woman is mowing the front lawn. These two actions cannot occur simultaneously, indicating a contradiction.",1,C,1,C (contradiction),1
+task190_,49,Sentence 1: Children recite something from white sheet of paper. Sentence 2: The children are coloring with coloring books.,C,N,0,"The relationship between the two sentences is neutral.
+
+Sentence 1 states that children are reciting something from a white sheet of paper, while Sentence 2 states that the children are coloring with coloring books. There is no direct contradiction or entailment between the two statements; they simply describe different activities that children could be engaged in simultaneously or separately.",0,N,0,N (neutral),0
+task190_,50,Sentence 1: Two people in a canoe watching something in the boulder lined water. Sentence 2: Two people are in a canoe.,C,E,0,"The relationship between the two sentences is ""entailment.""
+
+Sentence 1 states that there are two people in a canoe, which directly supports the claim made in Sentence 2 that two people are in a canoe.",0,E,0,E (entailment),0

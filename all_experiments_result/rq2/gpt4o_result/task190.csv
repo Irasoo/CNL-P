@@ -1,0 +1,1115 @@
+task_name,instance_id,instance_content,standard_output,nl_output,nl_score,spl_output,spl_score,risen_output,risen_score,rodes_output,rodes_score
+task190_,1,Sentence 1: This guy is visiting with someone in their car. Sentence 2: The guy visits a man.,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""This guy is visiting with someone in their car.""
+        sentence2: ""The guy visits a man.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""Neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""Neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+Result: Neutral",0,N,0,Output: N (Neutral),0
+task190_,2,Sentence 1: A man in a red striped shirt and vest making food for sale. Sentence 2: man selling delicious food,N,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man in a red striped shirt and vest making food for sale.
+        sentence2: man selling delicious food
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.
+[END AGENT OUTPUT]",0,N,1,Output: N (Neutral),1
+task190_,3,Sentence 1: A black-haired man dressed in black is blowing into an object while situated next to someone in pink. Sentence 2: A man is blowing dust off an object.,N,N,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A black-haired man dressed in black is blowing into an object while situated next to someone in pink.
+        sentence2: A man is blowing dust off an object.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A black-haired man dressed in black is blowing into an object while situated next to someone in pink.
+        sentence2: A man is blowing dust off an object.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",0,C,0,Output: N (Neutral),1
+task190_,4,Sentence 1: A man laying on the floor as he works on an unfinished wooden chair with a tool on the ground. Sentence 2: A man is standing on a recliner.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man laying on the floor as he works on an unfinished wooden chair with a tool on the ground.
+        sentence2: A man is standing on a recliner.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",1,C,1,Output: C (Contradiction),1
+task190_,5,Sentence 1: Two men stop to talk near a sign outside. Sentence 2: Two men talk near the stop sign.,N,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two men stop to talk near a sign outside.""
+        sentence2: ""Two men talk near the stop sign.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""neutral""
+[END AGENT OUTPUT]",1,E,0,Output: N (Neutral),1
+task190_,6,"Sentence 1: Two men in black jumped with arms raised on a tennis court, as the opposing team in white walk towards the net. Sentence 2: Two men in white jump.",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two men in black jumped with arms raised on a tennis court, as the opposing team in white walk towards the net.""
+        sentence2: ""Two men in white jump.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences disagree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences disagree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: ""Two men in black jumped with arms raised on a tennis court, as the opposing team in white walk towards the net.""
+        sentence2: ""Two men in white jump.""
+        result: ""The sentences disagree.""
+    [END_VARIABLES]
+[END_AGENT]",1,C,1,Output: C (Contradiction),1
+task190_,7,Sentence 1: A young boy trying to impress his dad by doing yard work. Sentence 2: A young person is working in the yard.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A young boy trying to impress his dad by doing yard work.
+        sentence2: A young person is working in the yard.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: neutral
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: neutral SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: neutral
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,8,Sentence 1: A man stands on snow and looks out at mountains and forests. Sentence 2: A man is on the snow.,C,E,0,"[ACTIVATE_WORKER: SentenceComparisonWorker]
+
+[INPUTS]
+    sentence1: A man stands on snow and looks out at mountains and forests.
+    sentence2: A man is on the snow.
+[END_INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: text SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    result: The sentences agree.
+[END_OUTPUTS]
+
+[DEACTIVATE_WORKER: SentenceComparisonWorker]
+
+[RESULT]
+    The sentences agree.
+[END_RESULT]",0,E,0,Output: E (Entailment),0
+task190_,9,Sentence 1: A plane is flying over a group of people. Sentence 2: A plan crashes into people.,C,C,1,"[START_WORKER SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A plane is flying over a group of people.
+        sentence2: A plan crashes into people.
+    [END_INPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: text SET]
+                sentence1: A plane is flying over a group of people.
+                sentence2: A plan crashes into people.
+                result: The sentences disagree.
+            [END_COMMAND]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+[END_WORKER]",1,C,1,Output: C (Contradiction),1
+task190_,10,Sentence 1: Blond girl in a yellow-belt martial arts uniform standing in front of a door and carrying a large trophy. Sentence 2: There is a blond girl in martial arts uniform outdoors,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: Blond girl in a yellow-belt martial arts uniform standing in front of a door and carrying a large trophy.
+        sentence2: There is a blond girl in martial arts uniform outdoors.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences are neutral.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences are neutral. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences are neutral.
+[END AGENT OUTPUT]",0,N,0,Output: N (Neutral),0
+task190_,11,Sentence 1: Many people at an outdoor gathering with a guy and girl in the foreground. Sentence 2: No one decided to come to the planned gathering.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: Many people at an outdoor gathering with a guy and girl in the foreground.
+        sentence2: No one decided to come to the planned gathering.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences disagree.
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,12,Sentence 1: A girl in a pink shirt playing with a green ball. Sentence 2: The small girl is having old fashioned fun.,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A girl in a pink shirt playing with a green ball.
+        sentence2: The small girl is having old fashioned fun.
+    [END INPUTS]
+
+    [OUTPUTS]
+        result: Neutral
+    [END OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: text SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: Neutral
+[END AGENT OUTPUT]",0,N,0,Output: N (Neutral),0
+task190_,13,Sentence 1: A man wearing a red shirt is using the first in a series of five ATM booths. Sentence 2: A man is inside a bank talking to a teller,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man wearing a red shirt is using the first in a series of five ATM booths.
+        sentence2: A man is inside a bank talking to a teller.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A man wearing a red shirt is using the first in a series of five ATM booths.
+        sentence2: A man is inside a bank talking to a teller.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",1,C,1,Output: C (Contradiction),1
+task190_,14,Sentence 1: A wedding is setup in a tropical area. Sentence 2: a wedding is all set up,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""A wedding is setup in a tropical area.""
+        sentence2: ""a wedding is all set up""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: ""A wedding is setup in a tropical area.""
+        sentence2: ""a wedding is all set up""
+        result: ""neutral""
+    [END_VARIABLES]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            [WORKER SentenceComparisonWorker]
+                [INPUTS]
+                    sentence1: ""A wedding is setup in a tropical area.""
+                    sentence2: ""a wedding is all set up""
+                [END_INPUTS]
+
+                [OUTPUTS]
+                    result: ""neutral""
+                [END_OUTPUTS]
+            [END_WORKER]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_AGENT]
+
+Result: The sentences are neutral.",0,E,0,Output: E (Entailment),0
+task190_,15,Sentence 1: A child is looking up at an adult while sitting in a stroller on a city sidewalk. Sentence 2: The child is sitting in a stroller.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A child is looking up at an adult while sitting in a stroller on a city sidewalk.
+        sentence2: The child is sitting in a stroller.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A child is looking up at an adult while sitting in a stroller on a city sidewalk.
+        sentence2: The child is sitting in a stroller.
+        result: The sentences agree.
+    [END_VARIABLES]
+[END_AGENT]",0,E,0,Output: E (Entailment),0
+task190_,16,Sentence 1: A man in a cast uses a camcorder while another man watches him. Sentence 2: Both men are asleep.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man in a cast uses a camcorder while another man watches him.
+        sentence2: Both men are asleep.
+    [END INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences disagree.
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,17,Sentence 1: A man in a long-sleeve shirt and jeans plays basketball. Sentence 2: The man is wearing swim trunks.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man in a long-sleeve shirt and jeans plays basketball.
+        sentence2: The man is wearing swim trunks.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences disagree.
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,18,Sentence 1: A woman aims a sledgehammer to break a concrete block placed on a man's stomach while children watch. Sentence 2: A woman aims a chainsaw to break a block of wood placed on a man's stomach while children watch.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A woman aims a sledgehammer to break a concrete block placed on a man's stomach while children watch.
+        sentence2: A woman aims a chainsaw to break a block of wood placed on a man's stomach while children watch.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences disagree.
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,19,Sentence 1: A man pushes a cart of bananas down the street. Sentence 2: A man is pushing a cart of fruit.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A man pushes a cart of bananas down the street.
+        sentence2: A man is pushing a cart of fruit.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,20,Sentence 1: A boy is riding on an orange bodyboard in the ocean. Sentence 2: A boy is playing in the ocean,N,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A boy is riding on an orange bodyboard in the ocean.
+        sentence2: A boy is playing in the ocean.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,21,Sentence 1: Two men in black jackets stand in a small boat in the water. Sentence 2: There are three men wearing blue jackets.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two men in black jackets stand in a small boat in the water.""
+        sentence2: ""There are three men wearing blue jackets.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""disagree""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""disagree"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""disagree""
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,22,Sentence 1: A crowd is watching a man surf. Sentence 2: A crowd is enjoying the man,N,N,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A crowd is watching a man surf.
+        sentence2: A crowd is enjoying the man.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences are neutral.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences are neutral. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A crowd is watching a man surf.
+        sentence2: A crowd is enjoying the man.
+        result: The sentences are neutral.
+    [END_VARIABLES]
+
+    [OUTPUT]
+        The sentences are neutral.
+    [END_OUTPUT]
+[END_AGENT]",1,E,0,Output: N (Neutral),1
+task190_,23,Sentence 1: An old woman with a cane sits on a red bench. Sentence 2: There is a person sitting.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: An old woman with a cane sits on a red bench.
+        sentence2: There is a person sitting.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences are neutral.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences are neutral. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: An old woman with a cane sits on a red bench.
+        sentence2: There is a person sitting.
+        result: The sentences are neutral.
+    [END_VARIABLES]
+
+    [OUTPUT]
+        result: The sentences are neutral.
+    [END_OUTPUT]
+[END_AGENT]",0,E,0,Output: E (Entailment),0
+task190_,24,Sentence 1: Two men and a woman in shorts and hiking gear stand in the snow before a large green sign with a smaller sign saying "Danger" on top. Sentence 2: Two people wearing shorts and hiking gear stand in snow next to a sign declaring "Danger".,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two men and a woman in shorts and hiking gear stand in the snow before a large green sign with a smaller sign saying 'Danger' on top.""
+        sentence2: ""Two people wearing shorts and hiking gear stand in snow next to a sign declaring 'Danger'.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""neutral""
+[END AGENT OUTPUT]",0,E,0,"Output: N (Neutral)
+
+Explanation: While both sentences describe a similar scene involving people in shorts and hiking gear standing in the snow near a sign that says ""Danger,"" there are differences in the details. Sentence 1 mentions ""Two men and a woman"" and a ""large green sign with a smaller sign saying 'Danger' on top,"" whereas Sentence 2 mentions ""Two people"" and a ""sign declaring 'Danger'."" The differences in the number of people and the description of the sign make it unclear if they are describing the exact same scene, leading to a neutral relationship.",0
+task190_,25,Sentence 1: A group of men stand at the back of an open semi-truck with dollies. Sentence 2: Some men from a company are moving merchandise into a truck,N,N,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A group of men stand at the back of an open semi-truck with dollies.
+        sentence2: Some men from a company are moving merchandise into a truck.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: neutral
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: neutral SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A group of men stand at the back of an open semi-truck with dollies.
+        sentence2: Some men from a company are moving merchandise into a truck.
+        result: neutral
+    [END_VARIABLES]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: neutral SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_AGENT]
+
+Result: The two sentences are neutral.",1,N,1,Output: N (Neutral),1
+task190_,26,Sentence 1: Large groups of families gather in an outdoor courtyard to pray for rain. Sentence 2: The families eat dinner at a table.,C,N,0,"[ACTIVATE_AGENT: SentenceComparisonAgent]
+
+[SET_VARIABLES]
+    sentence1: ""Large groups of families gather in an outdoor courtyard to pray for rain.""
+    sentence2: ""The families eat dinner at a table.""
+[END_SET_VARIABLES]
+
+[ACTIVATE_WORKER: SentenceComparisonWorker]
+
+[INPUTS]
+    sentence1: ""Large groups of families gather in an outdoor courtyard to pray for rain.""
+    sentence2: ""The families eat dinner at a table.""
+[END_INPUTS]
+
+[MAIN_FLOW]
+    [SEQUENTIAL_BLOCK]
+        COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: text SET]
+    [END_SEQUENTIAL_BLOCK]
+[END_MAIN_FLOW]
+
+[OUTPUTS]
+    result: ""neutral""
+[END_OUTPUTS]
+
+[DEACTIVATE_WORKER: SentenceComparisonWorker]
+
+[RESULT]
+    The two sentences are neutral. They describe different activities (praying for rain and eating dinner) without any direct contradiction or agreement.
+[END_RESULT]",0,C,1,Output: N (Neutral),0
+task190_,27,"Sentence 1: Two women walking next to a sign that reads ""DOWNTOWN"". Sentence 2: The women are standing next to a sign that says ""Cleveland, Ohio""",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two women walking next to a sign that reads 'DOWNTOWN'""
+        sentence2: ""The women are standing next to a sign that says 'Cleveland, Ohio'""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences disagree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences disagree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""The sentences disagree.""
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,28,Sentence 1: Two people with flotation devices are leaping into water. Sentence 2: two people learning swimming,N,N,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two people with flotation devices are leaping into water.""
+        sentence2: ""two people learning swimming""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""neutral""
+[END AGENT OUTPUT]",1,N,1,"Output: N (Neutral)
+
+The first sentence describes two people with flotation devices leaping into water, while the second sentence states that two people are learning swimming. The two sentences do not clearly agree or disagree with each other, as leaping into water with flotation devices does not necessarily imply that they are learning to swim. Therefore, the relationship is neutral.",1
+task190_,29,Sentence 1: Two people talk next to a flag with an eye illustration. Sentence 2: Two people are discussing the flag that is next to them.,N,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: Two people talk next to a flag with an eye illustration.
+        sentence2: Two people are discussing the flag that is next to them.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",0,E,0,Output: E (Entailment),0
+task190_,30,Sentence 1: Two shirtless men walking on a crowded beach. Sentence 2: A couple guys are getting some exercise.,C,N,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two shirtless men walking on a crowded beach.""
+        sentence2: ""A couple guys are getting some exercise.""
+    [END INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END WORKER]
+
+[AGENT OUTPUT]
+result: ""neutral""
+[END AGENT OUTPUT]",0,N,0,Output: N (Neutral),0
+task190_,31,Sentence 1: Two toddlers with NY Giants pajamas on play with the clean laundry. Sentence 2: The two people are very young.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two toddlers with NY Giants pajamas on play with the clean laundry.""
+        sentence2: ""The two people are very young.""
+    [END INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences agree.""
+    [END OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences agree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""The sentences agree.""
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,32,Sentence 1: A construction worker in overalls and a yellow construction hat shovels dirt into a wheelbarrow. Sentence 2: A man is at work,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A construction worker in overalls and a yellow construction hat shovels dirt into a wheelbarrow.
+        sentence2: A man is at work.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A construction worker in overalls and a yellow construction hat shovels dirt into a wheelbarrow.
+        sentence2: A man is at work.
+        result: The sentences agree.
+    [END_VARIABLES]
+[END_AGENT]",0,E,0,Output: E (Entailment),0
+task190_,33,"Sentence 1: Two older men, dressed in suits, give a presentation. Sentence 2: Two men sit silently.",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two older men, dressed in suits, give a presentation.""
+        sentence2: ""Two men sit silently.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences disagree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences disagree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]",1,C,1,Output: C (Contradiction),1
+task190_,34,Sentence 1: Two men are conversing nearby a painting. Sentence 2: Two men are stealing a painting.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two men are conversing nearby a painting.""
+        sentence2: ""Two men are stealing a painting.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences disagree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences disagree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""The sentences disagree.""
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,35,Sentence 1: A crowd is gathered in a large outdoor public space. Sentence 2: There is a crowd gathered watching someone having a dramatic fight.,N,N,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A crowd is gathered in a large outdoor public space.
+        sentence2: There is a crowd gathered watching someone having a dramatic fight.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: neutral
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: neutral SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A crowd is gathered in a large outdoor public space.
+        sentence2: There is a crowd gathered watching someone having a dramatic fight.
+        result: neutral
+    [END_VARIABLES]
+
+    [RESULT]
+        The sentences are neutral. The first sentence describes a crowd in a public space, while the second sentence adds specific details about the crowd's activity. They do not directly agree or disagree with each other.
+    [END_RESULT]
+[END_AGENT]",1,N,1,Output: N (Neutral),1
+task190_,36,Sentence 1: A girl is serving food and a man is staring at her. Sentence 2: A girl is serving food and notices a man is staring at her.,N,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A girl is serving food and a man is staring at her.
+        sentence2: A girl is serving food and notices a man is staring at her.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.",0,E,0,Output: E (Entailment),0
+task190_,37,Sentence 1: A woman wearing a white bolero jacket is holding a box with some items in it. Sentence 2: The woman is holding a bag.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A woman wearing a white bolero jacket is holding a box with some items in it.
+        sentence2: The woman is holding a bag.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A woman wearing a white bolero jacket is holding a box with some items in it.
+        sentence2: The woman is holding a bag.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",1,C,1,Output: C (Contradiction),1
+task190_,38,Sentence 1: A male hiker high in the mountains. Sentence 2: A guy is driving in the mountains.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A male hiker high in the mountains.
+        sentence2: A guy is driving in the mountains.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences are neutral.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences are neutral. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences are neutral.
+[END AGENT OUTPUT]",0,C,1,Output: C (Contradiction),1
+task190_,39,Sentence 1: A very dirty man is sleeping on the step of a building. Sentence 2: A drunk man has passed out next to a puddle of vomit in front of a building.,N,C,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A very dirty man is sleeping on the step of a building.
+        sentence2: A drunk man has passed out next to a puddle of vomit in front of a building.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A very dirty man is sleeping on the step of a building.
+        sentence2: A drunk man has passed out next to a puddle of vomit in front of a building.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",0,C,0,Output: N (Neutral),1
+task190_,40,"Sentence 1: A group of Indian men demonstrate the act of sleeping to 3 school children, a young boy, and two young girls. Sentence 2: Nobody is sleeping",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A group of Indian men demonstrate the act of sleeping to 3 school children, a young boy, and two young girls.
+        sentence2: Nobody is sleeping.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A group of Indian men demonstrate the act of sleeping to 3 school children, a young boy, and two young girls.
+        sentence2: Nobody is sleeping.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",1,C,1,Output: C (Contradiction),1
+task190_,41,Sentence 1: Five men are sitting at a table with drinks. Sentence 2: Some men are drinking at a table.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Five men are sitting at a table with drinks.""
+        sentence2: ""Some men are drinking at a table.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""neutral""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""neutral"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""neutral""
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,42,"Sentence 1: Three individuals, two men and one woman, on a stage in front of a crowd. Sentence 2: four people sat on the stage",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Three individuals, two men and one woman, on a stage in front of a crowd.""
+        sentence2: ""Four people sat on the stage.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""disagree""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""disagree"" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""disagree""
+[END_AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,43,"Sentence 1: One man is sitting on top of a school bus, while another man, wearing a matching shirt, is standing inside. Sentence 2: A dog catches a frisbee.",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: One man is sitting on top of a school bus, while another man, wearing a matching shirt, is standing inside.
+        sentence2: A dog catches a frisbee.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences are neutral.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences are neutral. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: One man is sitting on top of a school bus, while another man, wearing a matching shirt, is standing inside.
+        sentence2: A dog catches a frisbee.
+        result: The sentences are neutral.
+    [END_VARIABLES]
+[END_AGENT]",0,C,1,Output: N (Neutral),0
+task190_,44,Sentence 1: A young girl in a blue shirt with blue jean shorts is grasping the top of a white cinder block wall. Sentence 2: A human grasping.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A young girl in a blue shirt with blue jean shorts is grasping the top of a white cinder block wall.
+        sentence2: A human grasping.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: neutral
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: neutral SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A young girl in a blue shirt with blue jean shorts is grasping the top of a white cinder block wall.
+        sentence2: A human grasping.
+        result: neutral
+    [END_VARIABLES]
+
+    [OUTPUT]
+        The relationship between the two sentences is neutral.
+    [END_OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,45,"Sentence 1: A young boy in a red and white shirt is squatting on the ground, surrounded by bushes. Sentence 2: A boy is squatting on the ground.",C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A young boy in a red and white shirt is squatting on the ground, surrounded by bushes.
+        sentence2: A boy is squatting on the ground.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,46,"Sentence 1: Multiple people, one of whom is on a bicycle, cross a busy street. Sentence 2: Everyone is on a bicycle.",C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Multiple people, one of whom is on a bicycle, cross a busy street.""
+        sentence2: ""Everyone is on a bicycle.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences disagree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences disagree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: ""The sentences disagree.""
+[END AGENT OUTPUT]",1,C,1,Output: C (Contradiction),1
+task190_,47,Sentence 1: Two dogs run across the grassy field. Sentence 2: Two dogs are running in a grass field.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: Two dogs run across the grassy field.
+        sentence2: Two dogs are running in a grass field.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences agree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences agree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT OUTPUT]
+result: The sentences agree.
+[END AGENT OUTPUT]",0,E,0,Output: E (Entailment),0
+task190_,48,Sentence 1: A young woman wearing a pink and green striped shirt with a white belt and flip-flops sitting on a cement step. Sentence 2: A woman is mowing the front lawn.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: A young woman wearing a pink and green striped shirt with a white belt and flip-flops sitting on a cement step.
+        sentence2: A woman is mowing the front lawn.
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: The sentences disagree.
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: The sentences disagree. SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: A young woman wearing a pink and green striped shirt with a white belt and flip-flops sitting on a cement step.
+        sentence2: A woman is mowing the front lawn.
+        result: The sentences disagree.
+    [END_VARIABLES]
+[END_AGENT]",1,C,1,Output: C (Contradiction),1
+task190_,49,Sentence 1: Children recite something from white sheet of paper. Sentence 2: The children are coloring with coloring books.,C,C,1,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Children recite something from white sheet of paper.""
+        sentence2: ""The children are coloring with coloring books.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences are neutral.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences are neutral."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: ""Children recite something from white sheet of paper.""
+        sentence2: ""The children are coloring with coloring books.""
+        result: ""The sentences are neutral.""
+    [END_VARIABLES]
+[END_AGENT]",0,C,1,Output: C (Contradiction),1
+task190_,50,Sentence 1: Two people in a canoe watching something in the boulder lined water. Sentence 2: Two people are in a canoe.,C,E,0,"[WORKER: SentenceComparisonWorker]
+    [INPUTS]
+        sentence1: ""Two people in a canoe watching something in the boulder lined water.""
+        sentence2: ""Two people are in a canoe.""
+    [END_INPUTS]
+
+    [OUTPUTS]
+        result: ""The sentences agree.""
+    [END_OUTPUTS]
+
+    [MAIN_FLOW]
+        [SEQUENTIAL_BLOCK]
+            COMMAND-1 [COMMAND Given two sentences, determine if they agree, disagree, or are neutral RESULT result: ""The sentences agree."" SET]
+        [END_SEQUENTIAL_BLOCK]
+    [END_MAIN_FLOW]
+[END_WORKER]
+
+[AGENT: SentenceComparisonAgent]
+    [VARIABLES]
+        sentence1: ""Two people in a canoe watching something in the boulder lined water.""
+        sentence2: ""Two people are in a canoe.""
+        result: ""The sentences agree.""
+    [END_VARIABLES]
+[END_AGENT]
+
+The sentences agree.",0,E,0,Output: E (Entailment),0

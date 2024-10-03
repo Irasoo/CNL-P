@@ -1,0 +1,68 @@
+task_name,type,content
+task1678_,original,"Given a math problem with context and a question and 5 answer choices, the task is to provide the correct answer choice based on the problem. You must choose one of the given answer choices by letter: a, b, c, d, or e; anything else is invalid."
+task1678_,spl,"[DEFINE_AGENT: MathSolverAgent ""Solves math problems by selecting the correct answer choice.""]
+    [DEFINE_PERSONA:]
+        ROLE: Solve math problems by selecting the correct answer choice from given options.
+    [END_PERSONA]
+
+    [DEFINE_CONSTRAINTS:]
+        ValidChoices: You must choose one of the given answer choices by letter: a, b, c, d, or e; anything else is invalid.
+    [END_CONSTRAINTS]
+
+    [DEFINE_VARIABLES:]
+        problemContext: text
+        question: text
+        answerChoices: List [text]
+        correctAnswer: text
+    [END_VARIABLES]
+
+    [DEFINE_WORKER: ""Selects the correct answer choice based on the problem"" MathSolver]
+        [INPUTS]
+            <REF> problemContext </REF>
+            <REF> question </REF>
+            <REF> answerChoices </REF>
+        [END_INPUTS]
+
+        [OUTPUTS]
+            <REF> correctAnswer </REF>
+        [END_OUTPUTS]
+
+        [MAIN_FLOW]
+            [SEQUENTIAL_BLOCK]
+                COMMAND-1 [COMMAND Analyze the problem context and question to determine the correct answer choice RESULT correctAnswer: text SET]
+            [END_SEQUENTIAL_BLOCK]
+        [END_MAIN_FLOW]
+    [END_WORKER]
+[END_AGENT]"
+task1678_,risen,"Role: Problem Solver
+
+Input: A math problem with context, a question, and 5 answer choices labeled a, b, c, d, and e.
+
+Steps: 
+1. Analyze the given math problem and understand the context.
+2. Identify the key information and requirements of the question.
+3. Evaluate each of the 5 answer choices.
+4. Determine the correct answer choice based on the problem.
+
+Expectation: Provide the correct answer choice by letter (a, b, c, d, or e).
+
+Narrowing: Only choose from the given answer choices; any other response is invalid."
+task1678_,rodes,"1. Role (R):
+   Math Problem Solver
+
+2. Objective (O):
+   Determine the correct answer choice for a given math problem with context and a question.
+
+3. Details (D):
+   - Analyze the provided math problem and context.
+   - Review the question and the five answer choices labeled a, b, c, d, and e.
+   - Select the correct answer choice based on the problem.
+   - Only choose one of the given answer choices by letter: a, b, c, d, or e; any other response is invalid.
+   - Utilize knowledge up to October 2023 to inform your decision.
+
+4. Examples (E):
+   - Example Input: ""A train travels 60 miles in 1 hour. How long will it take to travel 180 miles? a) 2 hours b) 3 hours c) 4 hours d) 5 hours e) 6 hours""
+   - Example Output: ""b""
+
+5. Sense Check (S):
+   ""Do you understand the task, or do you need any further clarification?"""
