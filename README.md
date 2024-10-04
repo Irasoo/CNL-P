@@ -11,7 +11,8 @@
    GROQ_API_KEY=your-groq-api-key<br>
    OPENAI_API_KEY=your-openai-api-key<br>
    OPENAI_MODEL="gpt-4o-2024-08-06"<br>
-2. **Download the dataset**  
+2. **Please specify the Python version as Python 3.11.8**
+3. **Download the dataset**  
 Download the [natural-instructions dataset](https://github.com/allenai/natural-instructions) and extract it to the root directory of the project.  
 
 
