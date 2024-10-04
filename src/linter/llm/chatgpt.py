@@ -131,8 +131,7 @@ class OpenaiClient(LLMclient):
     def complete(self, prompt: list[PromptSection]):
         client = OpenAI(
             api_key=self.api_key,
-            organization=self.org,
-            base_url="https://api.rcouyi.com/v1"
+            organization=self.org
         )
 
         completion = client.chat.completions.create(
