@@ -108,8 +108,8 @@ to_spl_system_content = '''
    Learn the syntax of DSL BNF as it will guide the transformation process.
    Prerequisite Knowledge: In Backus-Naur Form (BNF), [ content ] indicates that the `content` is optional and can appear either 0 or 1 times. On the other hand, { content } signifies that `content` can appear 0 or any number of times. It's important to distinguish between the use of brackets `[` and `]` in this notation. Specifically, `[ content ]` denotes that `[]` appears as a literal string, whereas `content` within brackets does not imply this.
     ```
-    SPL_AGENT := "[DEFINE_AGENT:" AGENT_NAME ["\"" STATIC_DESCRIPTION "\""] "]" SPL_PROMPT "[END_AGENT]"
-    SPL_PROMPT := PERSONA [CONSTRAINTS] [DATA_TYPE] [VARIABLES] [WORKER]
+    CNLP_AGENT := "[DEFINE_AGENT:" AGENT_NAME ["\"" STATIC_DESCRIPTION "\""] "]" CNLP_PROMPT "[END_AGENT]"
+    CNLP_PROMPT := PERSONA [CONSTRAINTS] [DATA_TYPE] [VARIABLES] [WORKER]
 
     OPTIONAL_ASPECT := OPTIONAL_ASPECT_NAME ":" DESCRIPTION_WITH_REFERENCES
     OPTIONAL_ASPECT_NAME := <word> (* Capitalize the word *)
@@ -372,7 +372,7 @@ def openai_chat(
     if key is None:
         raise ValueError("Missing OPENAI_API_KEY!")
 
-    client = OpenAI(api_key=key, base_url="https://api.rcouyi.com/v1")
+    client = OpenAI(api_key=key)
     max_retries = 20
     retry_count = 0
 
