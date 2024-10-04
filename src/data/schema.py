@@ -1,5 +1,5 @@
-from typing import TypedDict, Literal, List, Optional, Dict, get_origin, get_args, NotRequired
-
+from typing import Literal, List, Optional, Dict, get_origin, get_args, NotRequired
+from typing_extensions import TypedDict
 
 class ATopping(TypedDict):
     _type: Literal["Boba", "Pudding", "TaroPaste"]
